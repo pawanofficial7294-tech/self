@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* Design Tokens & CSS Variables for Socio Economic Lacuna Foundation (SELF) */
+:root {
+  /* Brand Primary: Sustainable Nature Green */
+  --color-primary: #2e7d32;
+  --color-primary-hover: #1b5e20;
+  --color-primary-dark: #0f3813;
+  --color-primary-light: #e8f5e9;
+
+  /* Brand Secondary: Deep Trust Blue */
+  --color-secondary: #0d47a1;
+  --color-secondary-hover: #0a3158;
+  --color-secondary-light: #e3f2fd;
+
+  /* Accent: Warm Impact Orange */
+  --color-accent: #e65100;
+  --color-accent-hover: #bf360c;
+  --color-accent-light: #fff3e0;
+
+  /* Neutrals & Semantics */
+  --color-background: #ffffff;
+  --color-background-alt: #f8fafc;
+  --color-text-main: #1e293b;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-success: #2e7d32;
+  --color-error: #dc2626;
+
+  --font-size-base: 16px;
+}
+
+/* Tailwind Theme Bindings */
+@theme {
+  --color-self-green: var(--color-primary);
+  --color-self-green-hover: var(--color-primary-hover);
+  --color-self-green-light: var(--color-primary-light);
+  --color-self-blue: var(--color-secondary);
+  --color-self-blue-hover: var(--color-secondary-hover);
+  --color-self-blue-light: var(--color-secondary-light);
+  --color-self-orange: var(--color-accent);
+  --color-self-orange-hover: var(--color-accent-hover);
+  --color-self-bg: var(--color-background);
+  --color-self-bg-alt: var(--color-background-alt);
+  --color-self-text: var(--color-text-main);
+  --color-self-muted: var(--color-text-muted);
+  --color-self-border: var(--color-border);
+  --color-gov-navy: #0f172a;
+  --color-gov-navy-hover: #1e293b;
+  --color-gov-navy-light: #f1f5f9;
+  --color-gov-saffron: #f59e0b;
+  --color-gov-saffron-light: #fef3c7;
+  --color-gov-charcoal: #1e293b;
+  --color-gov-muted: #64748b;
+  --color-gov-border: #e2e8f0;
+  --color-gov-bg-alt: #f8fafc;
+  --color-gov-success: #16a34a;
+  --color-gov-error: #dc2626;
+}
+
+/* Base resets & typography */
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  overflow-x: hidden;
+}
+
+/* Font Scaling overrides */
+.font-scale-small {
+  --font-size-base: 14px;
+}
+.font-scale-normal {
+  --font-size-base: 16px;
+}
+.font-scale-large {
+  --font-size-base: 18px;
+}
+
+/* Accessibility Focus */
+*:focus-visible {
+  outline: 3px solid #2e7d32;
+  outline-offset: 2px;
+}
+
+/* High Contrast Override */
+.high-contrast {
+  --color-primary: #00ff00;
+  --color-secondary: #00ffff;
+  --color-background: #000000;
+  --color-background-alt: #121212;
+  --color-text-main: #ffffff;
+  --color-text-muted: #cccccc;
+  --color-border: #ffffff;
+}
+
+/* Ticker marquee animation */
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: ticker 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

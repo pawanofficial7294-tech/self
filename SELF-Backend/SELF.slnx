@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="SELF.Api/SELF.Api.csproj" />
+  <Project Path="SELF.Application/SELF.Application.csproj" />
+  <Project Path="SELF.Domain/SELF.Domain.csproj" />
+  <Project Path="SELF.Infrastructure/SELF.Infrastructure.csproj" />
+  <Project Path="SELF.Shared/SELF.Shared.csproj" />
+</Solution>
